@@ -1,0 +1,21 @@
+Infix to Prefix
+
+A * B + C / D
+
+Step1: (reverse)
+	D/C+B*A
+Step2: (infix to postfix)
+	DC/BA*+
+Step3: (reverse)
+	+*AB/CD
+
+(A - B/C) * (A/K-L)
+Step1:
+	)L-K/A(*)C/B-A(
+Step1b:
+	(L-K/A)*(C/B-A)
+Step2:
+	LKA/-CB/A-*
+Step3:
+	*-A/BC-/AKL
+
