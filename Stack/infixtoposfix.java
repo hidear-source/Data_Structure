@@ -16,7 +16,7 @@ public class infixtoposfix {
         return -1; 
     }
     
-    public static String infixToPostfix(String exp){ 
+    public static String infixToPostfix2(String exp){ 
         // initializing empty String for result 
         String result = ""; 
         // initializing empty stack 
