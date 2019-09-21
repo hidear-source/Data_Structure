@@ -23,7 +23,7 @@ public class Stack {
     }
     
     public String Pop(){
-        String item = null;
+        String item = "";
         if(top < 0){
             System.out.println("MYSTACK is empty");
         }
@@ -53,7 +53,7 @@ public class Stack {
     }
     
     public char Peek(){
-        String item = null;
+        String item = "";
         if(top >=0 ){
             item = MYSTACK[top];
         }
