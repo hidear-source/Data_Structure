@@ -18,7 +18,13 @@ public class Stack {
         }
         else if(top < size){
             top++;
-            MYSTACK[top] = i;
+            if(top == size){
+                System.out.println("MYSTACK is full");
+                top--;
+            }
+            else {
+                MYSTACK[top] = i;
+            }
         }
     }
     
