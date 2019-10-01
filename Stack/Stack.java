@@ -40,8 +40,13 @@ public class Stack {
     }
     
     public void displayStack(){
-        for(int i=top; i>=0; i--){
-            System.out.println(MYSTACK[i]);
+        if(top < 0){
+            System.out.println("MYSTACK is empty");
+        }
+        else{
+            for(int i=top; i>=0; i--){
+                System.out.println(MYSTACK[i]);
+            }
         }
     }
     
