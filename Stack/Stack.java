@@ -40,7 +40,7 @@ public class Stack {
     }
     
     public void displayStack(){
-        for(int i=0; i<top; i++){
+        for(int i=top; i>=0; i--){
             System.out.println(MYSTACK[i]);
         }
     }
