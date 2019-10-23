@@ -19,3 +19,38 @@ Step2:
 Step3:
 	*-A/BC-/AKL
 
+
+public static String infixToPrefixC(String exp){ 
+        String stp1 = new StringBuilder(exp).reverse().toString();
+        
+        String stp1b = "";
+        for(int i=0; i<stp1.length(); i++){
+            if(stp1.charAt(i) == ')'){
+                stp1b = stp1b + '(';
+            }
+            else if(stp1.charAt(i) == '('){
+                stp1b = stp1b + ')';
+            }
+            else {
+                stp1b = stp1b + stp1.charAt(i);
+            }
+        }
+        String stp2 = infixToPostfixC(stp1b);
+        String stp3 = new StringBuilder(stp2).reverse().toString();
+        
+        return stp3;
+    }
+    
+    public static void main(String[] args) {
+        String no1 = "A*B+C/D";
+        String no2 = "A*(B+C)/D";
+        String no3 = "A*(B+C/D)";
+        String no4 = "(a+b)*(c+d)";
+        String no5 = "(((a+b)*c)-d)";
+        System.out.println("1. " + no1 + " = " + infixToPrefixC(no1));
+        System.out.println("2. " + no2 + " = " + infixToPrefixC(no2));
+        System.out.println("3. " + no3 + " = " + infixToPrefixC(no3));
+        System.out.println("4. " + no4 + " = " + infixToPrefixC(no4));
+        System.out.println("5. " + no5 + " = " + infixToPrefixC(no5));
+    }
+    
